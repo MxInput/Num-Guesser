@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://rxf1mqj5f36s"]
+
+[ext_resource type="Script" uid="uid://b2cmv8jijheog" path="res://scripts/number_generator.gd" id="1_hneav"]
+[ext_resource type="PackedScene" uid="uid://d1fvbgoeq7186" path="res://nodes/num_container.tscn" id="2_cpdmu"]
+[ext_resource type="Script" uid="uid://b42wmimssdg5g" path="res://nodes/select_handler.gd" id="2_g5j3c"]
+
+[node name="Game" type="Node" unique_id=492764865]
+
+[node name="NumberGenerator" type="Node" parent="." unique_id=204677581]
+script = ExtResource("1_hneav")
+
+[node name="SelectHandler" type="Node" parent="." unique_id=736652129]
+script = ExtResource("2_g5j3c")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1655972485]
+
+[node name="NumContainers" type="Control" parent="CanvasLayer" unique_id=1596663820]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="1" parent="CanvasLayer/NumContainers" unique_id=1954013988 instance=ExtResource("2_cpdmu")]
+layout_mode = 0
+
+[node name="2" parent="CanvasLayer/NumContainers" unique_id=915337075 instance=ExtResource("2_cpdmu")]
+layout_mode = 0
+offset_left = 40.0
+offset_right = 80.0
+
+[node name="3" parent="CanvasLayer/NumContainers" unique_id=1598797932 instance=ExtResource("2_cpdmu")]
+layout_mode = 0
+offset_left = 90.0
+offset_right = 130.0
+
+[node name="4" parent="CanvasLayer/NumContainers" unique_id=945743264 instance=ExtResource("2_cpdmu")]
+layout_mode = 0
+offset_left = 141.0
+offset_right = 181.0
+
+[connection signal="ready" from="NumberGenerator" to="NumberGenerator" method="_on_ready"]
