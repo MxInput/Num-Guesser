@@ -6,11 +6,22 @@
 
 [node name="Game" type="Node" unique_id=492764865]
 
-[node name="NumberGenerator" type="Node" parent="." unique_id=204677581]
+[node name="NumberGenerator" type="Node" parent="." unique_id=204677581 node_paths=PackedStringArray("num_containers")]
 script = ExtResource("1_hneav")
+default_color = Color(0.5094789, 0.6847663, 0.764535, 1)
+selected_color = Color(0.2770109, 0.44171518, 0.63190037, 1)
+num_containers = NodePath("../CanvasLayer/NumContainers")
 
-[node name="SelectHandler" type="Node" parent="." unique_id=736652129]
+[node name="SelectHandler" type="Node" parent="." unique_id=736652129 node_paths=PackedStringArray("num_containers", "delay")]
 script = ExtResource("2_g5j3c")
+num_containers = NodePath("../CanvasLayer/NumContainers")
+default_color = Color(0.5094789, 0.6847663, 0.764535, 1)
+selected_color = Color(0.2770109, 0.44171518, 0.63190037, 1)
+delay = NodePath("Delay")
+
+[node name="Delay" type="Timer" parent="SelectHandler" unique_id=1255301660]
+wait_time = 0.1
+one_shot = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1655972485]
 
@@ -22,6 +33,7 @@ offset_bottom = 40.0
 
 [node name="1" parent="CanvasLayer/NumContainers" unique_id=1954013988 instance=ExtResource("2_cpdmu")]
 layout_mode = 0
+color = Color(0.5094789, 0.6847663, 0.764535, 1)
 
 [node name="2" parent="CanvasLayer/NumContainers" unique_id=915337075 instance=ExtResource("2_cpdmu")]
 layout_mode = 0
