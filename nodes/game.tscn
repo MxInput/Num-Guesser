@@ -36,6 +36,11 @@ one_shot = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1655972485]
 
+[node name="Background" type="ColorRect" parent="CanvasLayer" unique_id=648795727]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.06966808, 0.084201194, 0.23047441, 1)
+
 [node name="MainHolder" type="Control" parent="CanvasLayer" unique_id=1640429440]
 layout_mode = 3
 anchors_preset = 0
@@ -82,14 +87,36 @@ vertical_alignment = 1
 
 [node name="TutorialTitle" type="RichTextLabel" parent="CanvasLayer" unique_id=745569862]
 offset_left = 392.0
-offset_top = 252.0
+offset_top = 204.0
 offset_right = 1120.0
-offset_bottom = 336.0
+offset_bottom = 288.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("4_6hfer")
 theme_override_font_sizes/normal_font_size = 60
 bbcode_enabled = true
 text = "[wave]HOW TO PLAY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TutorialText" type="RichTextLabel" parent="CanvasLayer" unique_id=230847333]
+offset_left = 392.0
+offset_top = 297.0
+offset_right = 1120.0
+offset_bottom = 624.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_6hfer")
+theme_override_font_sizes/normal_font_size = 26
+text = "try to guess 4 random numbers
+
+Enter a number into each box
+
+you can use the left and right arrow keys or a/d to swap between boxes
+
+press enter to confirm a guess (all numbers must be filled to guess)
+
+after a guess you'll be told whether the number you entered is equal to (=), less than (<), or greater than (>) the number in that spot
+
+at any time use the r key to start a new game"
 horizontal_alignment = 1
 vertical_alignment = 1
 
