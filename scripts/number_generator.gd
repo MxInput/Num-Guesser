@@ -3,8 +3,12 @@ extends Node
 var numbers := []
 const AMOUNT_TO_GEN := 4
 
-@export var default_color : Color;
-@export var selected_color : Color;
+@export var select_handler : Node
+
+@export var chances_text : RichTextLabel
+
+@export var default_color : Color
+@export var selected_color : Color
 
 @export var num_containers : Control
 
@@ -22,6 +26,8 @@ func default_containers() -> void:
 		container.get_child(1).text = ""
 	
 func generate_new_numbers() -> void:
+	chances_text.text = "Chances Left: " + str(select_handler.NUM_CHANCES) + "/" + str(select_handler.NUM_CHANCES)
+
 	default_containers()
 	
 	numbers.clear()

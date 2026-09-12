@@ -6,10 +6,9 @@
 
 [node name="Game" type="Node" unique_id=492764865]
 
-[node name="NumberGenerator" type="Node" parent="." unique_id=204677581 node_paths=PackedStringArray("select_handler", "chances_text", "num_containers")]
+[node name="NumberGenerator" type="Node" parent="." unique_id=204677581 node_paths=PackedStringArray("select_handler", "num_containers")]
 script = ExtResource("1_hneav")
 select_handler = NodePath("../SelectHandler")
-chances_text = NodePath("../CanvasLayer/ChancesLeft")
 default_color = Color(0.5094789, 0.6847663, 0.764535, 1)
 selected_color = Color(0.2770109, 0.44171518, 0.63190037, 1)
 num_containers = NodePath("../CanvasLayer/MainHolder/NumContainers")
@@ -23,7 +22,6 @@ selected_color = Color(0.2770109, 0.44171518, 0.63190037, 1)
 equal_color = Color(0.2747567, 0.623422, 0.4064785, 1)
 greater_color = Color(0.8617728, 0.32735422, 0.42262822, 1)
 lesser_color = Color(0.21622863, 0.56193006, 0.5671688, 1)
-incorrect_color = Color(0.11139438, 0.13237026, 0.116827376, 1)
 delay = NodePath("Delay")
 num_gen = NodePath("../NumberGenerator")
 
@@ -50,18 +48,18 @@ color = Color(0.5094789, 0.6847663, 0.764535, 1)
 
 [node name="2" parent="CanvasLayer/MainHolder/NumContainers" unique_id=915337075 instance=ExtResource("2_cpdmu")]
 layout_mode = 0
-offset_left = 80.0
-offset_right = 160.0
+offset_left = 40.0
+offset_right = 80.0
 
 [node name="3" parent="CanvasLayer/MainHolder/NumContainers" unique_id=1598797932 instance=ExtResource("2_cpdmu")]
 layout_mode = 0
-offset_left = 160.0
-offset_right = 240.0
+offset_left = 80.0
+offset_right = 120.0
 
 [node name="4" parent="CanvasLayer/MainHolder/NumContainers" unique_id=945743264 instance=ExtResource("2_cpdmu")]
 layout_mode = 0
-offset_left = 240.0
-offset_right = 320.0
+offset_left = 120.0
+offset_right = 160.0
 
 [node name="ChancesLeft" type="RichTextLabel" parent="CanvasLayer" unique_id=763012518]
 offset_left = 393.0
