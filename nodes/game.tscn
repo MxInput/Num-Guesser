@@ -12,12 +12,16 @@ default_color = Color(0.5094789, 0.6847663, 0.764535, 1)
 selected_color = Color(0.2770109, 0.44171518, 0.63190037, 1)
 num_containers = NodePath("../CanvasLayer/NumContainers")
 
-[node name="SelectHandler" type="Node" parent="." unique_id=736652129 node_paths=PackedStringArray("num_containers", "delay")]
+[node name="SelectHandler" type="Node" parent="." unique_id=736652129 node_paths=PackedStringArray("num_containers", "delay", "num_gen")]
 script = ExtResource("2_g5j3c")
 num_containers = NodePath("../CanvasLayer/NumContainers")
 default_color = Color(0.5094789, 0.6847663, 0.764535, 1)
 selected_color = Color(0.2770109, 0.44171518, 0.63190037, 1)
+equal_color = Color(0.2747567, 0.623422, 0.4064785, 1)
+greater_color = Color(0.8617728, 0.32735422, 0.42262822, 1)
+lesser_color = Color(0.21622863, 0.56193006, 0.5671688, 1)
 delay = NodePath("Delay")
+num_gen = NodePath("../NumberGenerator")
 
 [node name="Delay" type="Timer" parent="SelectHandler" unique_id=1255301660]
 wait_time = 0.1

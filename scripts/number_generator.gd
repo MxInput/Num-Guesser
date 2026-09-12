@@ -19,6 +19,7 @@ func default_containers() -> void:
 			container.color = default_color
 			
 		container.get_child(0).text = ""
+		container.get_child(1).text = ""
 	
 func generate_new_numbers() -> void:
 	default_containers()
